@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "analysis": "Deep Analysis",
+    "tools": "Tools",
+    "pricing": "Pricing",
+    "login": "Login",
+    "signup": "Sign Up Free",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "hero": {
+    "badge": "Discover AI Wealth Opportunities",
+    "title": "How to Make Money with AI?",
+    "titleHighlight": "Deep Dives",
+    "titleSuffix": "into Every Real Case.",
+    "description": "No empty theory — only real money-making cases. From content creation to automated SaaS, we break down the logic behind AI monetization.",
+    "exploreBtn": "Explore Cases",
+    "submitBtn": "Submit Your Case"
+  },
+  "cases": {
+    "searchPlaceholder": "Search cases...",
+    "difficulty": "Difficulty",
+    "profitLabel": "Profit Potential",
+    "all": "All",
+    "viewAnalysis": "View Analysis",
+    "tools": "Required Tools",
+    "profitabilityLabel": "Expected Revenue",
+    "deepAnalysis": "Deep Analysis Report",
+    "toolbox": "Recommended Toolbox",
+    "ctaTitle": "Want the full step-by-step guide?",
+    "ctaDesc": "Upgrade to Pro to unlock unlimited AI generation + all deep case analyses.",
+    "ctaBtn": "Upgrade to Pro",
+    "proOnly": "Pro Exclusive",
+    "proOnlyDesc": "Upgrade to Pro to unlock the full deep analysis for this case",
+    "upgradeBtn": "Unlock Now"
+  },
+  "generator": {
+    "title": "AI Idea Generator",
+    "description": "Describe your background or interests, and our AI will craft a personalized monetization plan for you.",
+    "step1": "Enter your background (e.g., I code, I do photography, I have spare time)",
+    "step2": "AI analyzes 3 best-fit AI money-making directions for you",
+    "step3": "Get a detailed tool list and first-step action guide",
+    "placeholder": "e.g.: I'm an English teacher looking to earn extra income with AI...",
+    "generateBtn": "Generate My Plan",
+    "generatingBtn": "Analyzing...",
+    "resultTitle": "AI Recommendations",
+    "clearBtn": "Clear Results",
+    "poweredBy": "Powered by Gemini",
+    "loginRequired": "Please log in to use this feature",
+    "freeLimit": "Free users get 3 uses per day",
+    "limitReached": "Daily limit reached. Upgrade to Pro for unlimited use."
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Start free, upgrade anytime",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "saveLabel": "Save 30%",
+    "freePlan": {
+      "name": "Free",
+      "price": "¥0",
+      "priceUSD": "$0",
+      "period": "/forever",
+      "features": [
+        "Browse all case summaries",
+        "3 AI generations per day",
+        "Basic tool recommendations"
+      ],
+      "cta": "Get Started Free"
+    },
+    "proPlan": {
+      "name": "Pro",
+      "priceMonthly": "¥68",
+      "priceMonthlyUSD": "$9.9",
+      "priceYearly": "¥588",
+      "priceYearlyUSD": "$88",
+      "periodMonthly": "/month",
+      "periodYearly": "/year",
+      "badge": "Most Popular",
+      "features": [
+        "Unlock all deep case analyses",
+        "Unlimited AI idea generation",
+        "Priority customer support",
+        "Early access to new cases",
+        "Exclusive member community"
+      ],
+      "cta": "Upgrade Now"
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": "What payment methods are supported?",
+      "a1": "WeChat Pay, Alipay (China), and Credit Card/PayPal (International).",
+      "q2": "Can I cancel anytime?",
+      "a2": "Yes, cancel anytime with no extra charges.",
+      "q3": "Is there a refund policy?",
+      "a3": "Full refund within 7 days of purchase if unsatisfied."
+    }
+  },
+  "auth": {
+    "loginTitle": "Welcome Back",
+    "loginSubtitle": "Sign in to your account",
+    "signupTitle": "Start Your AI Wealth Journey",
+    "signupSubtitle": "Sign up free, start immediately",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "loginBtn": "Sign In",
+    "signupBtn": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signupLink": "Sign up free",
+    "loginLink": "Sign in",
+    "orContinueWith": "Or continue with",
+    "googleLogin": "Continue with Google",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset Password"
+  },
+  "dashboard": {
+    "title": "My Account",
+    "plan": "Current Plan",
+    "usageToday": "AI Uses Today",
+    "unlimited": "Unlimited",
+    "upgradePrompt": "Upgrade to Pro for unlimited use",
+    "upgradeBtn": "Upgrade Now",
+    "subscriptionExpires": "Subscription Expires",
+    "manageSubscription": "Manage Subscription"
+  },
+  "footer": {
+    "description": "We break down information barriers so everyone can find their wealth opportunity in the AI wave.",
+    "resources": "Resources",
+    "cases": "Case Library",
+    "tools": "Tools Directory",
+    "tutorials": "Tutorials",
+    "follow": "Follow Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2026 AI Money Maker. All rights reserved."
+  }
+}

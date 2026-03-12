@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "analysis": "深度解析",
+    "tools": "工具推荐",
+    "pricing": "价格方案",
+    "login": "登录",
+    "signup": "免费注册",
+    "dashboard": "我的账户",
+    "logout": "退出登录"
+  },
+  "hero": {
+    "badge": "发现 AI 时代的财富机会",
+    "title": "AI 怎么赚钱？",
+    "titleHighlight": "深度解析",
+    "titleSuffix": "每一个实战案例。",
+    "description": "我们不讲空洞的理论，只分享真实的赚钱 Case。从内容创作到自动化 SaaS，带你拆解 AI 变现的底层逻辑。",
+    "exploreBtn": "开始探索案例",
+    "submitBtn": "提交你的案例"
+  },
+  "cases": {
+    "searchPlaceholder": "搜索案例...",
+    "difficulty": "难度",
+    "profitLabel": "盈利潜力",
+    "all": "全部",
+    "viewAnalysis": "查看深度解析",
+    "tools": "所需工具",
+    "profitabilityLabel": "预期收益",
+    "deepAnalysis": "深度解析报告",
+    "toolbox": "推荐工具箱",
+    "ctaTitle": "想要获取更详细的实战步骤？",
+    "ctaDesc": "订阅 Pro 版本，解锁无限 AI 生成 + 全部深度案例分析。",
+    "ctaBtn": "立即升级 Pro",
+    "proOnly": "Pro 专属内容",
+    "proOnlyDesc": "升级到 Pro 版本解锁此案例的完整深度解析",
+    "upgradeBtn": "升级解锁"
+  },
+  "generator": {
+    "title": "AI 灵感生成器",
+    "description": "输入你的特长或感兴趣的领域，让我们的 AI 为你定制专属的变现方案。",
+    "step1": "输入你的背景（如：我会写代码、我擅长摄影、我有大量空闲时间）",
+    "step2": "AI 结合当前市场趋势，分析出 3 个最适合你的 AI 赚钱方向",
+    "step3": "获取详细的工具清单和第一步行动指南",
+    "placeholder": "例如：我是一名英语老师，想利用 AI 赚点外快...",
+    "generateBtn": "生成变现方案",
+    "generatingBtn": "正在分析中...",
+    "resultTitle": "AI 建议方案",
+    "clearBtn": "清除结果",
+    "poweredBy": "Powered by Gemini",
+    "loginRequired": "请先登录使用此功能",
+    "freeLimit": "免费用户每天可使用 3 次",
+    "limitReached": "今日使用次数已达上限，升级 Pro 享无限使用"
+  },
+  "pricing": {
+    "title": "选择适合你的计划",
+    "subtitle": "从免费开始，随时升级",
+    "monthly": "月付",
+    "yearly": "年付",
+    "saveLabel": "节省 30%",
+    "freePlan": {
+      "name": "免费版",
+      "price": "¥0",
+      "priceUSD": "$0",
+      "period": "/永久",
+      "features": [
+        "浏览所有案例摘要",
+        "每日 3 次 AI 生成",
+        "基础工具推荐"
+      ],
+      "cta": "免费开始"
+    },
+    "proPlan": {
+      "name": "Pro 版",
+      "priceMonthly": "¥68",
+      "priceMonthlyUSD": "$9.9",
+      "priceYearly": "¥588",
+      "priceYearlyUSD": "$88",
+      "periodMonthly": "/月",
+      "periodYearly": "/年",
+      "badge": "最受欢迎",
+      "features": [
+        "解锁所有案例深度解析",
+        "无限 AI 变现方案生成",
+        "优先客户支持",
+        "新案例第一时间通知",
+        "专属会员社群"
+      ],
+      "cta": "立即升级"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "支持哪些支付方式？",
+      "a1": "支持微信支付、支付宝（国内），以及信用卡/PayPal（国际）。",
+      "q2": "可以随时取消吗？",
+      "a2": "可以，随时可以取消，不会产生额外费用。",
+      "q3": "有退款政策吗？",
+      "a3": "购买后 7 天内如不满意，全额退款。"
+    }
+  },
+  "auth": {
+    "loginTitle": "欢迎回来",
+    "loginSubtitle": "登录你的账户",
+    "signupTitle": "开始你的 AI 创富之旅",
+    "signupSubtitle": "免费注册，立即使用",
+    "email": "邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "loginBtn": "登录",
+    "signupBtn": "注册",
+    "noAccount": "还没有账户？",
+    "hasAccount": "已有账户？",
+    "signupLink": "免费注册",
+    "loginLink": "立即登录",
+    "orContinueWith": "或通过以下方式继续",
+    "googleLogin": "用 Google 登录",
+    "forgotPassword": "忘记密码？",
+    "resetPassword": "重置密码"
+  },
+  "dashboard": {
+    "title": "我的账户",
+    "plan": "当前计划",
+    "usageToday": "今日 AI 使用次数",
+    "unlimited": "无限",
+    "upgradePrompt": "升级到 Pro 享受无限使用",
+    "upgradeBtn": "立即升级",
+    "subscriptionExpires": "订阅到期时间",
+    "manageSubscription": "管理订阅"
+  },
+  "footer": {
+    "description": "我们致力于打破信息差，让每一个人都能在 AI 浪潮中找到属于自己的财富机会。",
+    "resources": "资源",
+    "cases": "案例库",
+    "tools": "工具导航",
+    "tutorials": "实战教程",
+    "follow": "关注我们",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© 2026 AI 赚钱案例库. All rights reserved."
+  }
+}
