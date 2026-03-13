@@ -10,7 +10,7 @@
 - **国内支付**: 虎皮椒 (xunhupay.com)
 - **国际化**: next-intl (中文/英文)
 - **样式**: Tailwind CSS v4
-- **AI**: Google Gemini API
+- **AI**: OpenRouter（默认调用 Gemini 模型）
 
 ---
 
@@ -84,6 +84,10 @@ npm run dev
 npm install -g vercel
 vercel --prod
 ```
+
+## 国内/自托管部署
+
+如果你要部署到阿里云、腾讯云、华为云等服务器，而不是 Vercel，请看 [DEPLOY_CN.md](DEPLOY_CN.md)。
 
 ---
 

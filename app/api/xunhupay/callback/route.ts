@@ -14,15 +14,15 @@ function createAdminClient() {
   );
 }
 
-function verifySign(params: Record<string, string>, secret: string): boolean {
-  const receivedSign = params.sign;
+function verifyHash(params: Record<string, string>, secret: string): boolean {
+  const receivedHash = params.hash;
   const sorted = Object.keys(params)
-    .filter(k => k !== 'sign' && params[k] !== '')
+    .filter(k => k !== 'hash' && params[k] !== '')
     .sort()
     .map(k => `${k}=${params[k]}`)
     .join('&');
-  const expectedSign = crypto.createHash('md5').update(sorted + secret).digest('hex');
-  return receivedSign === expectedSign;
+  const expectedHash = crypto.createHash('md5').update(sorted + secret).digest('hex');
+  return receivedHash === expectedHash;
 }
 
 function getSubscriptionExpiry(plan: string): Date {
@@ -39,16 +39,15 @@ export async function POST(request: NextRequest) {
     const params: Record<string, string> = {};
     body.forEach((value, key) => { params[key] = value.toString(); });
 
-    // Verify signature
-    if (!verifySign(params, XUNHUPAY_APP_SECRET)) {
-      return new NextResponse('FAIL', { status: 400 });
+    // Validate the callback hash before touching order state.
+    if (!verifyHash(params, XUNHUPAY_APP_SECRET)) {
+      return new NextResponse('failure', { status: 400 });
     }
 
-    const { trade_order_id, openid_appid, status } = params;
+    const { trade_order_id, status } = params;
 
     if (status !== 'OD') {
-      // Not paid yet
-      return new NextResponse('OK');
+      return new NextResponse('success');
     }
 
     const supabase = createAdminClient();
@@ -61,7 +60,7 @@ export async function POST(request: NextRequest) {
       .single();
 
     if (!order || order.payment_status === 'completed') {
-      return new NextResponse('OK');
+      return new NextResponse('success');
     }
 
     // Update order status
@@ -75,9 +74,9 @@ export async function POST(request: NextRequest) {
       subscription_expires_at: getSubscriptionExpiry(order.plan).toISOString(),
     }).eq('id', order.user_id);
 
-    return new NextResponse('OK');
+    return new NextResponse('success');
   } catch (error) {
     console.error('Xunhupay callback error:', error);
-    return new NextResponse('FAIL', { status: 500 });
+    return new NextResponse('failure', { status: 500 });
   }
 }

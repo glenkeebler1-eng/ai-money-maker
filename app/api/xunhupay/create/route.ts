@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 
 export const dynamic = 'force-dynamic';
-import { createServerClient } from '@supabase/ssr';
 import crypto from 'crypto';
 
 // 虎皮椒支付 (xunhupay.com) - 个人开发者友好的聚合支付
@@ -10,16 +9,17 @@ import crypto from 'crypto';
 
 const XUNHUPAY_APP_ID = process.env.XUNHUPAY_APP_ID!;
 const XUNHUPAY_APP_SECRET = process.env.XUNHUPAY_APP_SECRET!;
-const XUNHUPAY_API_URL = 'https://api.xunhupay.com/payment/do.html';
+const XUNHUPAY_API_URL =
+  process.env.XUNHUPAY_API_URL || 'https://api.xunhupay.com/payment/do.html';
 
 const PLAN_PRICES: Record<string, { amount: string; title: string }> = {
   pro_monthly: { amount: '68.00', title: 'AI 赚钱案例库 Pro 月付' },
   pro_yearly: { amount: '588.00', title: 'AI 赚钱案例库 Pro 年付' },
 };
 
-function generateSign(params: Record<string, string>, secret: string): string {
+function generateHash(params: Record<string, string>, secret: string): string {
   const sorted = Object.keys(params)
-    .filter(k => k !== 'sign' && params[k] !== '')
+    .filter(k => k !== 'hash' && params[k] !== '')
     .sort()
     .map(k => `${k}=${params[k]}`)
     .join('&');
@@ -50,13 +50,14 @@ export async function POST(request: NextRequest) {
       total_fee: planConfig.amount,
       title: planConfig.title,
       time: Math.floor(Date.now() / 1000).toString(),
+      version: 'v3',
       notify_url: `${baseUrl}/api/xunhupay/callback`,
       return_url: `${baseUrl}/${locale}/dashboard?payment=success`,
       nonce_str: crypto.randomBytes(8).toString('hex'),
       type: 'WAP',
     };
 
-    params.sign = generateSign(params, XUNHUPAY_APP_SECRET);
+    params.hash = generateHash(params, XUNHUPAY_APP_SECRET);
 
     // Save pending order
     await supabase.from('orders').insert({
@@ -82,7 +83,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: result.errmsg || 'Payment creation failed' }, { status: 500 });
     }
 
-    return NextResponse.json({ payUrl: result.url });
+    return NextResponse.json({
+      payUrl: result.url,
+      qrCodeUrl: result.url_qrcode ?? null,
+    });
   } catch (error) {
     console.error('Xunhupay create error:', error);
     return NextResponse.json({ error: 'Payment failed' }, { status: 500 });
